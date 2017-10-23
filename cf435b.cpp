@@ -1,3 +1,9 @@
+/*
+If we have l nodes on one set and r nodes on the other set, there can be l*r edges total that maintains bipartite propeerty. 
+Since there are already n-1 edges, the maximum number of edges that can be added while maintaining bipartite property is 
+l*r - (n-1). 
+*/ 
+
 #include <iostream>
 #include <cstdlib>
 #include <algorithm> 
