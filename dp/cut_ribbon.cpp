@@ -49,3 +49,27 @@ int main(){
 	return 0;  
 }
 */  
+
+/*
+This is a bottom up dp code that also solves the problem 
+
+#include <iostream>
+#include <cstdlib>
+#include <algorithm> 
+#include <cstring> 
+using namespace std; 
+int dp[4005]; 
+int n,a,b,c; 
+const int INF = 987654321; 
+int main(){
+	cin >> n >> a >> b >> c; 
+	for (int i = 1; i <= n; i++){
+		dp[i] = -INF;  
+		if (i-a >= 0) dp[i] = max(dp[i],dp[i-a]+1); 
+		if (i-b >= 0) dp[i] = max(dp[i],dp[i-b]+1); 
+		if (i-c >= 0) dp[i] = max(dp[i],dp[i-c]+1); 
+	}
+	cout << dp[n] << endl;
+	return 0; 
+}
+*/  
