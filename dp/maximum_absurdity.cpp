@@ -27,14 +27,14 @@ int main(){
 		}
 	}
 	ll ans = 0; 
-	int a = -1,b = -1;  
+	int idx1 = -1,idx2 = -1;  
 	for (int i = 1; i <= n; i++){
 		if (dp[i-1].first+psum[i+k-1]-psum[i-1] > ans){
 			ans = dp[i-1].first+psum[i+k-1]-psum[i-1];  
-			a = dp[i-1].second; 
-			b = i;  
+			idx1 = dp[i-1].second; 
+			idx2 = i;  
 		}
 	}
-	cout << a << " " << b << endl; 
+	cout << idx1 << " " << idx2 << endl; 
 	return 0;  
 }
