@@ -17,7 +17,7 @@ int main(){
 	cin >> q; 
 	while (q--){
 		cin >> key; 
-		/*vector<int>::iterator it = lower_bound(x.begin(),x.end(),key); 	
+		vector<int>::iterator it = lower_bound(x.begin(),x.end(),key); 	
 		if (it == x.begin() && x[0] > key){
 			cout << 0 << endl; 
 		}else if (it == x.end() && x[n-1] <= key){
@@ -28,18 +28,7 @@ int main(){
 			}else if (*it > key){
 				cout << it-x.begin() << endl; 
 			}
-		}*/  
-		// find index containing value less than or equal to key 
-		int l = 0, r = n-1; 
-		while (l <= r){
-			int mid = (l+r)>>1; 
-			if (x[mid] <= key){
-				l = mid+1; 
-			}else{
-				r = mid-1; 
-			}
 		}
-		cout << r+1 << endl;  
 	}
 	return 0; 
 }
