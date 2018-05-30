@@ -9,7 +9,7 @@ bool ok(double d){
 	for (int i = 1; i < n; i++){
 		if (a[i-1]+d < a[i]-d) return false;  
 	}
-	return a[n-1]+d >= l; // lastly   
+	return true;    
 }
 int main(){
 	cin >> n >> l; 
@@ -17,7 +17,7 @@ int main(){
 		cin >> a[i];  
 	}
 	sort(a,a+n); 
-	double L = a[0], R = l; 
+	double L = max(a[0],l-a[n-1]), R = l; 
 	for (int i = 0; i < 100; i++){
 		double mid = (L+R)/2.0;  
 		if (ok(mid)) R = mid; 
