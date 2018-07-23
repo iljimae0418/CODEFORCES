@@ -11,5 +11,5 @@ int main(){
 		n -= (n/a[i])*a[i]; 
 	}
 	cout << cnt << endl; 
-	return 0; g
+	return 0; 
 }
