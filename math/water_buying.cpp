@@ -3,9 +3,9 @@
 #include <algorithm>
 using namespace std;
 int main(int argc,char **argv){
-  int n;
-  cin >> n;
-  while (n--){
+  int q;
+  cin >> q;
+  while (q--){
     typedef long long ll;
     ll n,a,b;
     cin >> n >> a >> b;
